@@ -1,7 +1,4 @@
-function averageBigSum (arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
-  return sum / arr.length;
+function aVeryBigSum ( arr )
+{
+    return arr.reduce( ( a, b ) => a + b, 0 );
 }

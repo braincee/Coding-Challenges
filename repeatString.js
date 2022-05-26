@@ -1,8 +1,16 @@
 function repeatedString(s, n) {
-    // Write your code here
-      let occurances = (s.split("a").length - 1);
-   let max = Math.floor(n / s.length);
-   let totalAs= occurances * max;
-   totalAs += (s.slice(0, n % s.length).split("a").length - 1);
-   return totalAs;
+    let count = 0;
+    let a = 0;
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === 'a') {
+            a++;
+        }
+    }
+    count = a * Math.floor(n / s.length);
+    for (let i = 0; i < n % s.length; i++) {
+        if (s[i] === 'a') {
+            count++;
+        }
+    }
+    return count;
 }

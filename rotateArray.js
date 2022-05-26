@@ -1,22 +1,11 @@
-function rotLeft(a, d) {
-    // Write your code here
- let size = a.length;
-   let newArr = [];
-   let rotateLeftIdx = d;
-
-   let i = 0;
-   while(rotateLeftIdx < size){
-       newArr[i] = a[rotateLeftIdx];
-       i++;
-       rotateLeftIdx++;
-   }
-
-   //set rotateLeftIdx back to 0
-   rotateLeftIdx = 0;
-   while(rotateLeftIdx < d){
-       newArr[i] = a[rotateLeftIdx];
-       i++;
-       rotateLeftIdx++;
-   }
-   return newArr;
+function compareTriplets (a, b) {
+  let score = [0, 0]
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] > b[i]) {
+      score[0]++
+    } else if (a[i] < b[i]) {
+      score[1]++
+    }
+  }
+  return score
 }
