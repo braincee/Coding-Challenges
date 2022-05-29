@@ -1,7 +1,7 @@
 function timeConversion ( s )
 {
     let AMPM = s.slice( -2 );
-    let time = s.slice( 0, -2 );
+    let time = "";
     // if our time is from 12:00 AM to 12:59 AM
     if ( AMPM === "AM" )  {
         // if our time is 12:00 AM
