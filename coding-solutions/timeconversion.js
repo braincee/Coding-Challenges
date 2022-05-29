@@ -20,8 +20,8 @@ function timeConversion ( s )
         if( s.substring( 0, 2 ) === "12" ) {
             time = s.substring( 0, 2 );
         } else { 
-            // add 12 to the time using parseInt base 10
-            time = ( parseInt( s.substring( 0, 2 ) ) + 12 ).toString();
+            // add 12 to the time using parseInt base 10 and change to string
+            time = parseInt( s.substring( 0, 2 ), 10 ) + 12
         }
     }
     // return the time removing the AM/PM
